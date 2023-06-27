@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Left Panel Example</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Left Panel -->
+  <div class="left-panel">
+    <ul>
+      <li><a href="#home" onclick="showContent('home')">Home </a></li>
+      <li><a href="#information" onclick="showContent('information')">Information </a></li>
+      <li><a href="#guide" onclick="showContent('guide')">Guide </a></li>
+      <li><a href="#contact" onclick="showContent('contact')">Contact </a></li>
+
+    </ul>  
+
+    <!--  --> 
+    
+  </div>  
+ 
+
+  <!-- Content Area -->
+  <div class="content-area" id="content">
+    <!-- Default content -->
+    <div class="content">
+      <div class="flex-container">
+        <div class="conainer">
+          <h1 style="margin-left: 12px;"> WELCOME TO</h1>
+          <p style="font-size: 20px; font-family: sans-serif; margin-left: 12px;">  vision statement helps define the purpose and focus of your Carrier .
+          A vision for the future is identifying and taking steps toward fulfilling one's dream.</p>
+        </div>
+        <div>
+          <img src="bg.jpg" alt="issue image" style=" width: 21rem; height:18rem; margin-right: 22px;">
+        </div>
+      </div> 
+      
+    </div>
+  </div> 
+    </div>
+  </div>
+
+  <script>
+    function showContent(component) {
+      var contentDiv = document.getElementById("content");
+      var content = "";
+
+      switch (component) {
+        case "home":
+          content = `
+            <div class="content">
+              <h2>Home</h2>
+               <section>   
+                <div class="row"> 
+                  <div class="col-lg-6">  
+                    <h5 style=" margin-left:20px">Welcome to our school </h5>
+                    <h1  style=" margin-top: 45%;  font-family: sans-serif; font-weight: bold; margin-left:20px"> BEST PLACE TO </br> LEARN GRAPHIC </br>  <span> DESIGN !</span> </h1> 
+                      <button type="button" class="btn"> Let's go!</button>
+                    </div> 
+                  
+                    <div class="col-lg-6">   
+
+                      <div class="rotate" style=" background-image: linear-gradient(rgb(223, 196, 146),#dc98cdb);">
+                     <div class="front-img" > <img src="girl.jpg" style=" width: 159%;  rotate: -33deg"; class="rotate-img">  </div>
+                    <div>
+                    </div>
+                  
+
+                  </div>
+                </section>
+
+            </div>
+          `;
+          break;
+        case "contact":
+          content = `
+            <div class="content">
+                 <img src="spiral.jpg" alt="issue with image" style=" width: 148px; margin-left: 4px; opacity: 0.4;">
+              <section class="contact">
+                
+    <div class="container" style =" margin-top: -162px">
+      <h2>Contact Us</h2>
+      <h3 Style=" font-weight:bold; margin-bottom: 20px; margin-top:-35px"> Say <span>Hello </span></h3>
+      <p>Have any questions or inquiries? Reach out to us and we'll be happy to assist you.</p>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <input type="number" placeholder="Your Number">
+
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+      <img src="pink-spiral.png" alt="issue with image" style="width: 198px; margin-left: 80%; opacity: 0.3; margin-top: -18%;">
+    </div>
+    
+
+  </section>
+            </div>
+          `;
+          break;
+        case "information":
+          content = `
+            <div class="content">
+             <div class="text">
+              <h3><span> Our Information </span></h3>
+                <h2> Provided <span> Information</span> <h2>
+              </div>
+
+           
+              <div class="row">
+       <div class="col-lg-4"  border: 3px solid black;>
+        <div class="card" style="width:250px ">
+          <img class="card-img-top" src="bulb.gif" alt="Card image"  style="width :200px">
+          <div class="card-body" style="width:222px">
+            <h4 class="card-title"> <span> Creative Ideas </span></h4>
+            <p class="card-text">Don’t wait for inspiration. It comes while working. </p>
+           
+          </div>
+        </div> 
+       </div>
+       <!--  -->
+       <div class="col-lg-4">
+        <div class="card" style="width:254px  height:32vh  border: 3px solid black;">
+          <img class="card-img-top" src="tech.jpg" alt="Card image">
+          <div class="card-body" style="margin-top: 28px; ">
+            <h4 class="card-title" style="margin-top:-6px"> <span>Technology  </span></h4>
+            <p class="card-text">The use of scientific knowledge for the welfare of all.</p>
+           
+          </div>
+        </div> 
+       </div>
+       <div class="col-lg-4">
+        <div class="card" style="width:250px  border: 3px solid black;">
+          <img class="card-img-top"  src="trick1.png" alt="Card image"    style="width :180px">
+          <div class="card-body">
+            <h4 class="card-title" >  <span> Useful Trick </span></h4>
+            <p class="card-text">Be willing to change, to learn, to grow.</p>
+            
+          </div>
+        </div> 
+       </div>
+      </div>
+            </div>
+          `;
+          break;
+        case "guide":
+          content = `
+            <div class="content">
+
+              <h2 style="text-align: center;"> <span> Guide</span> <h2>
+
+              <p style="text-align: center;">Here's a Guide <span>For You.</span></p> 
+              <div class="container" style="margin-top: 45px;">
+  <div class="btn-group-vertical">
+     <button type="button" class="btn btn-primary">  Web Development </button> ></br>
+     <button type="button" class="btn btn-primary"> Web Design </button> ></br>
+     <button type="button" class="btn btn-primary">Web Development </button> ></br>
+     <button type="button" class="btn btn-primary">< Wordpress </button> ></br>
+    
+  </div>
+  <img src="contact.jpg" alt="issue with image" style="height: 238px; width: 339px; margin-left: 50%; margin-top: -40%;
+};">
+
+</div>
+              
+            </div>
+          `;
+          break;
+          case "Web Development":
+          content = `
+            <div class="content">
+              <h2>Home</h2>
+               <section>   
+                <div class="row"> 
+                  <div class="col-lg-6"> 
+                    <img src="logo1.png" alt="issue with the image">
+                    </div>
+
+
+                    <div class="col-lg-6"> 
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius error, aspernatur neque, perferendis deleniti sapiente 
+      exercitationem esse veli provident architecto rem facilis eos!
+                    <p> </p>
+                    </div>
+
+                  </div>
+             
+
+                  </div>
+                </section>
+
+            </div>
+          `;
+      }
+     
+      contentDiv.innerHTML = content;
+    }  
+
+    // hohkjjjjjjjjjjjjj
+    
+    
+  </script>
+</body>
+
+</html>
